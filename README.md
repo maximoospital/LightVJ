@@ -49,7 +49,7 @@ Install requirements
 Run app
 
 ```bash
-  python main.py
+  python lightvj.py
 ```
 
 ### Linux and other operating systems (Builds ≤ 1.1)
