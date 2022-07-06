@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>489</width>
+    <height>376</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>489</width>
+    <height>376</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>489</width>
+    <height>376</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>491</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>489</width>
+     <height>376</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>489</width>
+      <height>376</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>General</string>
+    </attribute>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>5</y>
+       <width>161</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Dark Red (Default)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Amber</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Blue</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Cyan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Light Green</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Pink</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Purple</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Teal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dark Yellow</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Amber</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Blue</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Blue 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Cyan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Cyan 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Light Green</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Light Green 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Orange</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Pink</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Pink 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Purple</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Purple 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Red</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Red 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Teal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Teal 500</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Yellow</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Theme:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>301</y>
+       <width>461</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Check for Updates</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Output Settings</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>90</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Monitor</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>120</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Resolution</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Integrations</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>Ableton Link</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_8">
+      <attribute name="title">
+       <string>Spout</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
