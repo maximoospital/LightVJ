@@ -77,140 +77,140 @@
     <widget class="QComboBox" name="comboBox">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>5</y>
-       <width>161</width>
+       <x>290</x>
+       <y>20</y>
+       <width>181</width>
        <height>22</height>
       </rect>
      </property>
      <item>
       <property name="text">
-       <string>Dark Red (Default)</string>
+       <string>dark_red.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Amber</string>
+       <string>dark_amber.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Blue</string>
+       <string>dark_blue.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Cyan</string>
+       <string>dark_cyan.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Light Green</string>
+       <string>dark_lightgreen.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Pink</string>
+       <string>dark_pink.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Purple</string>
+       <string>dark_purple.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Teal</string>
+       <string>dark_teal.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dark Yellow</string>
+       <string>dark_yellow.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Amber</string>
+       <string>light_amber.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Blue</string>
+       <string>light_blue.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Blue 500</string>
+       <string>light_blue_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Cyan</string>
+       <string>light_cyan.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Cyan 500</string>
+       <string>light_cyan_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Light Green</string>
+       <string>light_lightgreen.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Light Green 500</string>
+       <string>light_lightgreen_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Orange</string>
+       <string>light_orange.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Pink</string>
+       <string>light_pink.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Pink 500</string>
+       <string>light_pink_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Purple</string>
+       <string>light_purple.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Purple 500</string>
+       <string>light_purple_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Red</string>
+       <string>light_red.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Red 500</string>
+       <string>light_red_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Teal</string>
+       <string>light_teal.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Teal 500</string>
+       <string>light_teal_500.xml</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Light Yellow</string>
+       <string>light_yellow.xml</string>
       </property>
      </item>
     </widget>
@@ -218,7 +218,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>22</y>
        <width>71</width>
        <height>16</height>
       </rect>
@@ -231,9 +231,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>301</y>
-       <width>461</width>
-       <height>41</height>
+       <y>311</y>
+       <width>351</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
@@ -244,7 +244,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
+       <y>70</y>
        <width>101</width>
        <height>16</height>
       </rect>
@@ -257,7 +257,7 @@
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>90</y>
+       <y>120</y>
        <width>101</width>
        <height>16</height>
       </rect>
@@ -270,13 +270,26 @@
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>120</y>
+       <y>180</y>
        <width>101</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
       <string>Resolution</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>310</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
      </property>
     </widget>
    </widget>

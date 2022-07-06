@@ -1,5 +1,5 @@
 import webbrowser
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSettings
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import (QApplication)
 from qt_material import apply_stylesheet
@@ -12,6 +12,7 @@ QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
 # Main window
 class MainWindow(QtWidgets.QMainWindow):
+
     # menu bar creation
     def _createMenuBar(self):
         # filling up a menu bar
@@ -69,6 +70,17 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self.mainWidget)
         self._createMenuBar()
         self.resize(640, 480)
+        self.settings = QSettings('MyQtApp', 'App1')
+        # print(self.settings.fileName())
+        try:
+            self.resize(self.settings.value('window size'))
+            self.move(self.settings.value('window position'))
+        except:
+            pass
+
+    def closeEvent(self, event):
+        self.settings.setValue('window size', self.size())
+        self.settings.setValue('window position', self.pos())
 
 
 if __name__ == '__main__':
