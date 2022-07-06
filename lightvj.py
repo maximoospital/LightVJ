@@ -11,6 +11,8 @@ QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
 
 # Main window
+
+
 class MainWindow(QtWidgets.QMainWindow):
 
     # menu bar creation
@@ -57,8 +59,8 @@ class MainWindow(QtWidgets.QMainWindow):
         button = dlg.exec()
 
     # about button functionality
-    def about_clicked(self, s):
-        dlg = About(self)
+    def about_clicked(s):
+        dlg = About()
         button = dlg.exec()
 
     def __init__(self, parent=None):
@@ -70,7 +72,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self.mainWidget)
         self._createMenuBar()
         self.resize(640, 480)
-        self.settings = QSettings('MyQtApp', 'App1')
+        self.settings = QSettings('Maximo Ospital', 'LightVJ')
         # print(self.settings.fileName())
         try:
             self.resize(self.settings.value('window size'))
