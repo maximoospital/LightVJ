@@ -1,13 +1,14 @@
 import webbrowser
-from PyQt5.QtCore import Qt, QSettings
-from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtWidgets import (QApplication)
-from qt_material import apply_stylesheet
-from screens.settings import Settings
-from screens.about import About
-from screens.MainWidget import mainWidget
-QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
+from PyQt5 import QtGui, QtWidgets, uic
+from PyQt5.QtCore import Qt, QSettings, pyqtSignal, pyqtSlot
+from PyQt5.QtWidgets import (QApplication, QDialog)
+from qt_material import apply_stylesheet
+
+from screens.MainWidget import mainWidget
+from screens.about import About
+
+QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
 # Main window
 class MainWindow(QtWidgets.QMainWindow):
@@ -52,11 +53,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
     # settings button functionality
     def set_clicked(self, s):
-        dlg = Settings(self)
-        button = dlg.exec()
+        button = Settings().exec_()
 
     # about button functionality
-    def about_clicked(s):
+    def about_clicked(self, s):
         dlg = About()
         button = dlg.exec()
 
@@ -77,9 +77,43 @@ class MainWindow(QtWidgets.QMainWindow):
         except:
             pass
 
+    @pyqtSlot()
+    def CambioDeOpciones(self):
+        configuracion = QSettings('Maximo Ospital', 'LightVJ')
+        if configuracion.contains("theme"):
+            apply_stylesheet(app, theme=configuracion.value('theme'))
+        else:
+            apply_stylesheet(app, theme=configuracion.value('dark_red.xml'))
+
     def closeEvent(self, event):
         self.settings.setValue('window size', self.size())
         self.settings.setValue('window position', self.pos())
+
+
+class Settings(QDialog):
+    settingsSignal = pyqtSignal()
+
+    def apply(self):
+        self.settings.setValue('theme', self.theme.currentText())
+        apply_stylesheet(app, theme=self.settings.value('theme'))
+        apply_stylesheet(self, theme=self.settings.value('theme'))
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowFlag(Qt.WindowStaysOnTopHint)
+        self.setWindowFlags(self.windowFlags() & (~Qt.WindowContextHelpButtonHint))
+        uic.loadUi('screens/settings.ui', self)  # Load the .ui file
+        self.settings = QSettings('Maximo Ospital', 'LightVJ')
+        apply_stylesheet(self, theme=self.settings.value('theme'))
+        self.applybutton.clicked.connect(self.apply)
+        try:
+            self.move(self.settings.value('help window position'))
+        except:
+            pass
+        self.show()  # Show the GUI
+
+    def closeEvent(self, event):
+        self.settings.setValue('help window position', self.pos())
 
 
 if __name__ == '__main__':
@@ -87,11 +121,11 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     # apply material style and show window
-    settings = QSettings('Maximo Ospital', 'LightVJ')
-    if settings.contains("theme"):
-        apply_stylesheet(app, theme=settings.value('theme'))
+    config = QSettings('Maximo Ospital', 'LightVJ')
+    if config.contains("theme"):
+        apply_stylesheet(app, theme=config.value('theme'))
     else:
-        apply_stylesheet(app, theme=settings.value('dark_red.xml'))
+        apply_stylesheet(app, theme=config.value('dark_red.xml'))
     main = MainWindow()
     main.show()
 
