@@ -6,13 +6,10 @@ from qt_material import apply_stylesheet
 from screens.settings import Settings
 from screens.about import About
 from screens.MainWidget import mainWidget
-
 QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
 
 # Main window
-
-
 class MainWindow(QtWidgets.QMainWindow):
 
     # menu bar creation
@@ -90,8 +87,11 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     # apply material style and show window
-    apply_stylesheet(app, theme='dark_red.xml')
-
+    settings = QSettings('Maximo Ospital', 'LightVJ')
+    if settings.contains("theme"):
+        apply_stylesheet(app, theme=settings.value('theme'))
+    else:
+        apply_stylesheet(app, theme=settings.value('dark_red.xml'))
     main = MainWindow()
     main.show()
 

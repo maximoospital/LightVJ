@@ -285,7 +285,7 @@
       <string>Resolution</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="apply">
+    <widget class="QPushButton" name="applybutton">
      <property name="geometry">
       <rect>
        <x>380</x>
